@@ -9,49 +9,52 @@ Keras=2.2
 tensorflow=1.14
 ```
 
-Data available [online](http://digbio.missouri.edu/dliu/projects/waterquality/) , npy format. 
+Data available [online here](http://digbio.missouri.edu/dliu/projects/waterquality/) , in npy format. 
 
 # Index:
 
 image-image7/: 
-raw image. name: XXX nb_batch a/b.jpg
+raw image folder (deprecated; please using .npy file for analysis). name: XXX nb_batch a/b.jpg
 XXX means content value, nb_batch means batch number of that image. (total nb of batch equals to nb of folders). a/b means testing under bottle a or b
 
+
 classic_classification/, classic_regression/:
-results. subfolder "Gray" have some fun images
+results showing. subfolder "Gray" have some fun images
+
 
 classification_result/:
 conventional methods comparsion experiment, in .py file
 
-interval_result/:
 
+interval_result/:
 results by interval experiments
 
-modelWeights/:
 
+modelWeights/:
 h5 files of nn weight
 
-result/:
 
+result/:
 csv format, comparsion table, for different model settings
 
-result_analyse/:
 
+result_analyse/:
 measure how many predicted points in each bin(interval)
 
-water/:
 
-some playground for the data and model middle layer. (feat_analysis.ipynb)
+water/:
+playground for the data and model middle layer. (feat_analysis.ipynb)
 
 
 website/:
+oil prediction website. 
 
-old oil prediction website. 
 
 pytorch-cifar/:
 
 *main.py*: wrapper for training
 *models/*: conventional models and new models (mainly [attnResNet50.py](https://github.com/minoriwww/waterquality/blob/master/pytorch-cifar/models/attnResNet50.py))
+
 
 /bin_analyse.py
 
@@ -75,7 +78,7 @@ pretrained resnet18 with linear fc
 load image dataset,image hight/width...
 
 */data_to_npy.py*
-save the processed data as npy, 
+save the processed data as .npy, 
 
 */draw_width.py*
 draw predicted bin width 
@@ -100,14 +103,15 @@ loss function in Keras, for ordinal loss
 scatter plot for prediction results
 
 */predictioin_tocsv.py*
-show_roc_pr_curve, store comparsion result in csv
+show_roc_pr_curve, store comparsion result in a .csv
 
 
-Please cite (for now)
+
+Please cite
 ```
 @misc{waterquality,
   author = {minoriwww},
-  title = {waterquality project and OilSS},
+  title = {waterquality project & OilSS},
   year = {2019},
   publisher = {GitHub},
   journal = {GitHub repository},
